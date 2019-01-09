@@ -1,0 +1,42 @@
+server:
+  port: 8087
+  #单机模式经常会因为环境问题使Eureka进入自我保护模式，因此我们先关闭Eureka的自我保护功能并配置Eureka Server清理无效节点的时间间隔
+  #在application.properties中增加配置
+  enable-self-preservation: false
+  eviction-interval-timer-in-ms: 4000
+
+spring:
+  #注册实例配置
+  application:
+    name: douniwan
+  #redis配置
+  redis:
+    database: 0
+    host: localhost
+    port: 6379
+    pool:
+      # 连接池最大连接数（使用负值表示没有限制）
+      max-active: 8
+      # 连接池最大阻塞等待时间（使用负值表示没有限制）
+      max-wait: -1
+      # 连接池中的最大空闲连接
+      max-idle: 4
+      # 连接池中的最小空闲连接
+      min-idle: 0
+    # 连接超时时间（毫秒）
+    timeout: 3000
+
+##eureka注册中心
+eureka:
+#  #展示ip地址
+  instance:
+    prefer-ip-address: true
+#  #eureka注册地址
+  client:
+    serviceUrl:
+      defaultZone: http://root:root@localhost:8761/eureka/
+
+#笑话接口配置
+douniwan:
+  key: 99f1026caba171c61e59f18b44e358e0
+  play_word_url: http://v.juhe.cn/joke/content/text.php

@@ -1,0 +1,27 @@
+server:
+  port: 8088
+
+#服务注册中心
+eureka:
+  client:
+    service-url:
+      defaultZone: http://root:root@localhost:8761/eureka/
+
+spring:
+  #服务名称
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          #配置文件所在的目录
+          search-paths: cloudConfig
+          #服务的git仓库地址
+          uri: https://github.com/wangdehua/cloudConfig.git
+      #配置文件所在的分支
+      label: master
+      #git仓库的用户名&密码
+      username: wangdehua
+      password: w15518006985
+

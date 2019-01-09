@@ -1,0 +1,28 @@
+server:
+  port: 8088
+  #单机模式经常会因为环境问题使Eureka进入自我保护模式，因此我们先关闭Eureka的自我保护功能并配置Eureka Server清理无效节点的时间间隔
+  #在application.properties中增加配置
+  enable-self-preservation: false
+  eviction-interval-timer-in-ms: 4000
+
+spring:
+#  #注册实例配置
+  application:
+    name: xiaoqigui
+##eureka注册中心
+eureka:
+#  #展示ip地址
+  instance:
+    prefer-ip-address: true
+#  #eureka注册地址
+  client:
+    serviceUrl:
+      defaultZone: http://root:root@localhost:8761/eureka/
+
+#天气配置
+weather:
+  key: 5506037d1a754ed0beae31e225093882
+  now_weather_url: https://free-api.heweather.net/s6/weather/now
+  now_lifestyle_url: https://free-api.heweather.net/s6/weather/lifestyle
+  now_air_url: https://free-api.heweather.net/s6/air/now
+  auto_ip: auto_ip

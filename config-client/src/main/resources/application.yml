@@ -1,0 +1,7 @@
+# bootstrap.yml 和 application.yml 一定要分开 , 且 bootstrap.yml 比 application.yml 执行早
+# bootstrap.yml 先去加载配置文件
+server:
+  port: 8011
+spring:
+  application:
+    name: config-client

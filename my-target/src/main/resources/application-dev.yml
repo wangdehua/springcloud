@@ -1,0 +1,52 @@
+server:
+  port: 8086
+  #单机模式经常会因为环境问题使Eureka进入自我保护模式，因此我们先关闭Eureka的自我保护功能并配置Eureka Server清理无效节点的时间间隔
+  #在application.properties中增加配置
+  enable-self-preservation: false
+  eviction-interval-timer-in-ms: 4000
+
+spring:
+#  #注册实例配置
+  application:
+    name: my-target
+  #redis配置
+  redis:
+    database: 1
+    host: localhost
+    port: 6379
+    pool:
+      # 连接池最大连接数（使用负值表示没有限制）
+      max-active: 8
+      # 连接池最大阻塞等待时间（使用负值表示没有限制）
+      max-wait: -1
+      # 连接池中的最大空闲连接
+      max-idle: 4
+      # 连接池中的最小空闲连接
+      min-idle: 0
+    # 连接超时时间（毫秒）
+    timeout: 3000
+  #配置邮件消息
+  mail:
+    host: smtp.qq.com
+  #发送邮件者信箱
+    username: 1509258936@qq.com
+  #这里不是邮箱的登录密码，而是开启PO3/SMTP服务时邮箱的授权码
+    password: njjlmwbunsywjdbe
+    default-encoding: UTF-8
+    port: 587
+    properties:
+      mail:
+        smtp:
+          socketFactory:
+            class: javax.net.ssl.SSLSocketFactory
+        debug: true
+
+##eureka注册中心
+eureka:
+#  #展示ip地址
+  instance:
+    prefer-ip-address: true
+#  #eureka注册地址
+  client:
+    serviceUrl:
+      defaultZone: http://root:root@localhost:8761/eureka/

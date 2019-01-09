@@ -1,0 +1,25 @@
+#默认端口
+server:
+  port: 8761
+
+#只当做eureka server 不作为client
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+
+    #注册中心地址
+    serviceUrl:
+      defaultZone: http://localhost:${server.port}/eureka/
+
+  #驱逐下线的服务，间隔,5秒，默认是60，建议开发和测试环境配置
+  server:
+    evictionIntervalTimerInMs: 5000
+
+#安全认证
+security:
+  basic:
+    enabled: true
+  user:
+    name: root
+    password: root

@@ -1,0 +1,13 @@
+# bootstrap.yml 和 application.yml 一定要分开 , 且 bootstrap.yml 比 application.yml 执行早
+# bootstrap.yml 先去加载配置文件
+spring:
+  cloud:
+    config:
+      #指明配置服务中心的网址
+      uri: http://localhost:8088/
+      #对应文件名 config-**.properties
+      name: config
+      #指明开发环境
+      profile: dev
+      #指明远程仓库的分支
+      label: master

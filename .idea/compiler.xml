@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="config-client" />
+        <module name="config-server" />
+        <module name="douniwan" />
+        <module name="eureka-server-manager" />
+        <module name="gateway-zuul" />
+        <module name="my-target" />
+        <module name="user-client" />
+        <module name="user-server" />
+        <module name="xiaoqigui" />
+        <module name="xiaoxiao-common" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="common-utils" target="1.8" />
+      <module name="eureka-server" target="1.8" />
+      <module name="xiaoxiao-xiaoqigui" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
