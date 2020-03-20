@@ -2,6 +2,7 @@ package com.xiaoxiao.target.scheduled;
 
 import com.alibaba.fastjson.JSONObject;
 import com.xiaoxiao.target.utils.DateUtil;
+import com.xiaoxiao.target.utils.RedisUtils;
 import com.xiaoxiao.target.vo.MyTarget;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,4 +1,4 @@
-package com.xiaoxiao.common.utils;
+package com.xiaoxiao.target.utils;
 
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
@@ -15,6 +15,15 @@ public class RedisUtils {
 
     @Resource
     private RedisTemplate<String, Object> redisTemplate;
+
+
+    /**
+     *  获取所有的key
+     * @return
+     */
+    public Set<String> keys(){
+        return this.redisTemplate.keys("*");
+    }
 
     /**
      * 指定缓存失效时间

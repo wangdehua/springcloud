@@ -2,6 +2,7 @@ package com.xiaoxiao.douniwan.service;
 
 import com.alibaba.fastjson.JSONObject;
 import com.xiaoxiao.douniwan.utils.HttpUtils;
+import com.xiaoxiao.douniwan.utils.RedisUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;

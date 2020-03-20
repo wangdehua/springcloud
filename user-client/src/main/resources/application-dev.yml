@@ -1,6 +1,6 @@
 #配置端口号
 server:
-  port: 81
+  port: 8180
   #单机模式经常会因为环境问题使Eureka进入自我保护模式，因此我们先关闭Eureka的自我保护功能并配置Eureka Server清理无效节点的时间间隔
   #在application.properties中增加配置
   enable-self-preservation: false

@@ -2,13 +2,13 @@ package com.xiaoxiao.target.service;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.xiaoxiao.common.utils.RedisUtils;
 import com.xiaoxiao.target.utils.DateUtil;
+import com.xiaoxiao.target.utils.RedisUtils;
 import com.xiaoxiao.target.vo.MyTarget;
 import org.apache.commons.lang3.StringUtils;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.regex.Pattern;
@@ -16,7 +16,7 @@ import java.util.regex.Pattern;
 @Service
 public class TargetService {
 
-    @Autowired
+    @Resource
     private RedisUtils redisUtils ;
 
     private SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");

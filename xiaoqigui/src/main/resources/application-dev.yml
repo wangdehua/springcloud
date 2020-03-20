@@ -25,4 +25,4 @@ weather:
   now_weather_url: https://free-api.heweather.net/s6/weather/now
   now_lifestyle_url: https://free-api.heweather.net/s6/weather/lifestyle
   now_air_url: https://free-api.heweather.net/s6/air/now
-  auto_ip: auto_ip
+  auto_ip: beijing

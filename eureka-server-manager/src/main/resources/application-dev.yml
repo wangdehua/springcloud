@@ -10,7 +10,7 @@ eureka:
 
     #注册中心地址
     serviceUrl:
-      defaultZone: http://localhost:${server.port}/eureka/
+      defaultZone: http://192.168.213.130:${server.port}/eureka/
 
   #驱逐下线的服务，间隔,5秒，默认是60，建议开发和测试环境配置
   server:
